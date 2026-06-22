@@ -48,8 +48,7 @@ ALL_MODEL_COLS = [
     "Num_Type_of_Loan", "Credit_History_Age_Months",
 ]
 
-# SageMaker client — EC2 otomatis menggunakan IAM Role yang di-attach, tidak perlu hardcode credentials
-@st.cache_resource  # fitur dari streamlit untuk simpan client di RAM Streamlit
+@st.cache_resource
 def load_client():
     try:
         client = boto3.client("sagemaker-runtime")
