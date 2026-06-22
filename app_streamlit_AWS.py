@@ -232,7 +232,7 @@ with st.form("prediction_form"):
             help=(
     			'''Pilih **Unknown** jika perilaku pembayaran (besaran dan frekuensi belanja) nasabah
     			tidak dapat ditentukan dari data yang tersedia.''',
-            ),
+            )
         )
 
     submitted = st.form_submit_button("Prediksi Credit Score", use_container_width=True)
