@@ -51,7 +51,7 @@ ALL_MODEL_COLS = [
 @st.cache_resource
 def load_client():
     try:
-        client = boto3.client("sagemaker-runtime")
+        client = boto3.client("sagemaker-runtime", region_name="us-east-1")
         return client, None
     except Exception as e:
         return None, str(e)
